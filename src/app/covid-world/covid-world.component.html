@@ -1,0 +1,38 @@
+<app-header></app-header>
+<div class="container-fluid mt-5">
+    <h2><i class="fas fa-globe"></i></h2>
+    <h2 class="">Global Situation</h2>
+    <h3>
+        Until now: {{ today | date:'fullDate' }} {{ today | date:'mediumTime' }}
+    </h3>
+    <div class="row d-flex bs text-white" style="height: 200px; margin-top: 30px;">
+        <div class="col m-1 cf p-2 rounded fw-bold">
+            <h2><i class="far fa-angry"></i></h2>
+            <h2 style="text-align: center ;">&ensp;Confirmed cases: </h2>
+            <h4 style="text-align:center ;">{{ wouldWide?.confirmed }}</h4>
+        </div>
+        <div class="col m-1 rc p-2 rounded fw-bold">
+            <h2><i class="fa fa-briefcase-medical"></i></h2>
+            <h2 style="text-align: center ;">&ensp;Recovered:</h2>
+            <h4 style="text-align:center ;">{{ wouldWide?.recovered }}</h4>
+        </div>
+        <div class="col m-1 d p-2 rounded fw-bold">
+            <h2><i class="fas fa-skull"></i></h2>
+            <h2 style="text-align: center ;">&ensp; Deaths: </h2>
+            <h4 style="text-align:center ;">{{ wouldWide?.deaths }}</h4>
+        </div>
+        <div class="col m-1 fr p-2 rounded fw-bold">
+            <h2><i class="fas fa-chart-line"></i></h2>
+            <h2 style="text-align:center ;">&ensp;Fatality rate: </h2>
+            <h4 style="text-align:center ;">{{ fatalityRate }}%</h4>
+        </div>
+
+    </div>
+    <p style="font-size: 25px ; margin-top: 10px; text-align: center;"><span style="color: green;">Globally</span>, as
+        of <span style="color: rgb(2, 150, 255); font-weight:bold ;">{{ today | date:'medium' }}</span>, there have been
+        <span style="color: rgb(255, 115, 0);">{{ wouldWide?.confirmed }} confirmed cases</span> of COVID-19, including
+        <span style="color:red ;">{{ wouldWide?.deaths }} deaths</span>, reported to WHO. For more information, visit <a href="https://covid19.who.int/">WHO</a>
+    </p>
+    
+</div>
+<app-footer></app-footer>

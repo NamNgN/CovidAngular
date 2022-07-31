@@ -1,0 +1,39 @@
+<app-header></app-header>
+<div class="container-fluid mt-5">
+    <div class="row">
+        <div class="col">
+            <label class="h4 mr-1">Choose Regional:</label>
+            <label class="small-lb text-muted">Country & Region</label>
+            <select [(ngModel)]='selectedOption' (change)='getCountry()' style="width: 200px;border-top: none;border-left: none;border-right: none;border-radius: 0%;" class="form-control">
+        <option  *ngFor="let item of countries"> {{ item.countryregion}}</option>
+      </select>
+        </div>
+
+    </div>
+    <div class="row d-flex bs text-white" style="height:200px ;">
+        <div class="col m-1 cf p-2 rounded fw-bold">
+            <h2><i class="fas fa-male"></i></h2><h2 style="text-align: center ;">&ensp;Confirmed: </h2>
+            <h4 style="text-align:center ;">{{ confirmed }}</h4>
+        </div>
+        <div class="col m-1 rc p-2 rounded fw-bold">
+            <h2><i class="fas fa-plus-square"></i></h2><h2 style="text-align: center ;">&ensp;Recovered:</h2>
+            <h4 style="text-align:center ;">{{ reCover}}</h4>
+        </div>
+        <div class="col m-1 d p-2 rounded fw-bold">
+            <h2><i class="fas fa-skull"></i></h2><h2 style="text-align: center ;">&ensp; Deaths: </h2>
+            <h4 style="text-align:center ;">{{ deaths }}</h4>
+        </div>
+        <div class="col m-1 fr p-2 rounded fw-bold">
+            <h2><i class="fas fa-chart-line"></i></h2> <h2 style="text-align:center ;">&ensp;Fatality rate: </h2>
+            <h4 style="text-align:center ;">{{ fatality}}%</h4>
+        </div>
+    </div>
+    <div class="c">
+        <h2><i class="fas fa-chart-area"></i></h2>
+        <h2>Chart</h2>
+        <p>Diagram showing covid cases, recoveries, deaths and mortality rates for a region and country.</p>
+    </div>
+    <app-covid-statistical></app-covid-statistical>
+</div>
+
+<app-footer></app-footer>

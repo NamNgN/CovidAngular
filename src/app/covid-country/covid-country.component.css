@@ -1,0 +1,49 @@
+.bs {
+    box-sizing: border-box;
+}
+
+.cf {
+    background: #ff6600;
+}
+
+.rc {
+    background: #00b7ff;
+}
+
+.d {
+    background: #ff0048;
+}
+
+.fr {
+    background: #3e0015;
+}
+
+h4 {
+    font-family: 'Roboto', sans-serif;
+}
+
+p,
+span {
+    font-family: 'Roboto', sans-serif;
+    font-weight: lighter !important;
+}
+
+.form-control {
+    display: inline-block !important;
+    position: relative;
+}
+
+.small-lb {
+    position: absolute;
+    top: -60%;
+    font-size: 0.7rem;
+}
+.container-fluid{
+    height: 850px;
+}
+.c{
+    float: left;
+    width: 20%;
+    margin-top: 100px;
+   padding:20px
+}
